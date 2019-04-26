@@ -73,6 +73,7 @@ export default class extends React.Component {
     this.setState({
         clear: false,
     },()=>{
+      this.inputSelf.focus();
       onChange && onChange('');
     })
   };
@@ -86,13 +87,14 @@ export default class extends React.Component {
       value,
       disabled,
       error,
-      remove
+      remove,
+      className
     } = this.props;
     const { clear  } = this.state;
     return (
       <React.Fragment>
         <div
-          className={classnames("form-control", {
+          className={classnames("form-control",className, {
             "form-control-disabled": disabled
           })}
         >
