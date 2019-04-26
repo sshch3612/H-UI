@@ -63,14 +63,14 @@ export default class Icon extends  React.Component {
         <Flex className='icon-content' itemstyle={{padding:'15px 0',textAlign:'center'}}>
         <Aweicon type="fa-camera-retro" />
         <Aweicon type="fa-camera-retro" size="34" color="red" />
-        <Iconfont type="check-circle"/>
-        <Iconfont type="close-circle"/>
-        <Iconfont type="left-circle"/>
-        <Iconfont type="right-circle"/>
-        <Iconfont type="up-circle"/>
-        <Iconfont type="down-circle"/>
-        <Iconfont type="reload"/>
-        <Iconfont type="info-circle"/>
+        <Iconfont type="video"/>
+        <Iconfont type="add"/>
+        <Iconfont type="camera"/>
+        <Iconfont type="enter"/>
+        <Iconfont type="return"/>
+        <Iconfont type="right"/>
+        <Iconfont type="search"/>
+        <Iconfont type="packup"/>
         </Flex>
         <Table columns={columns} datasource={datasource}/>
         <div style={{color:'#666',padding:'15px'}}>

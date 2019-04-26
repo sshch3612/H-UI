@@ -15,13 +15,13 @@ function Base(props) {
       <List>
         <Whitespace>基础</Whitespace>
         <Wingblank>
-         <Link to='/icon'><ListItem arrow>Icon图标</ListItem></Link> 
+         <Link to='/icon'><ListItem arrow={<Iconfont type={'enter'}/>}>Icon图标</ListItem></Link> 
         </Wingblank>
         <Wingblank>
-          <Link to='/buttons'><ListItem arrow>Button 按钮</ListItem></Link>
+          <Link to='/buttons'><ListItem arrow={<Iconfont type={'enter'}/>}>Button 按钮</ListItem></Link>
         </Wingblank>
         <Wingblank>
-          <ListItem arrow>Icon图标</ListItem>
+          <ListItem arrow={<Iconfont type={'enter'}/>}>Icon图标</ListItem>
         </Wingblank>
       </List>
     </div>
