@@ -1,0 +1,57 @@
+@import '../../theme.less';
+.searchbar {
+  display: flex;
+  align-items: center;
+  &-content {
+    padding: 4px 6px 4px 30px; // background-color: #c0c0c0;
+    border: 1px solid #c0c0c0;
+    position: relative;
+    flex:1;
+    display: flex;
+    align-items: center;
+    border-radius: 18px;
+    margin-right: 5px;
+    &-input {
+      flex: 1;
+      input {
+        // background-color: #c0c0c0;
+        
+      }
+    }
+    &-mask {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 555;
+    }
+    &-placeholder {
+      position: absolute;
+      box-sizing: border-box;
+      left: 50%;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      transform: translate3d(-50%, 0, 0);
+      transition: all .5s;
+      color: #c0c0c0; // justify-content: center;
+      // transition: all 3s;
+      &-left {
+        left: 6px;
+        transform: translate3d(0, 0, 0);
+      }
+      &-text {
+        margin-left: 3px;
+      }
+    }
+  }
+  &-btn {
+    // width:64px;
+    padding:4px 8px;
+    background-color: @base-color;
+    color:#fff;
+    border-radius: 4px;
+  }
+}
