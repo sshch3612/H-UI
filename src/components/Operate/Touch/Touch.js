@@ -23,6 +23,7 @@ export default class extends React.Component {
       doubleTapTimer: null
     };
   }
+
   componentDidMount() {}
   touchStart = e => {
     e.preventDefault();
@@ -36,7 +37,7 @@ export default class extends React.Component {
     }, {
       passive: false //  禁止 passive 效果http://w3cay.com/post/dc49b55.html
     })
-  };
+  }
 
   touchMove = e => {
     console.log('touchMove',Date.now());
@@ -48,9 +49,10 @@ export default class extends React.Component {
       onMove && onMove(pageX - startPageX, pageY - startPageY);
       setTimeout(() => {
         this.isActive = true;
-      }, ;
+      },0);
     }
-  };
+  }
+
   touchEnd = e => {
     this.state.endPageX = e.changedTouches[0].pageX;
     this.state.endPageY = e.changedTouches[0].pageY;
@@ -83,8 +85,9 @@ export default class extends React.Component {
       onSwiper && onSwiper(direction);
     }
     const { onTouchEnd } = this.props;
+    const { startPageX, startPageY } = this.state;
     console.log('this.state.endTime',this.state.endTime);
-    onTouchEnd && onTouchEnd(e);
+    onTouchEnd && onTouchEnd(this.state.endPageX-startPageX,this.state.endPageY-startPageY);
   };
 
   eventTime = (startTime, endTime, tapTime) => {
@@ -126,7 +129,7 @@ export default class extends React.Component {
     } else {
       return;
     }
-  };
+  }
 
   swipeDirection = (x1, x2, y1, y2) => {
     return Math.abs(x1 - x2) >= Math.abs(y1 - y2)
@@ -136,7 +139,8 @@ export default class extends React.Component {
       : y1 - y2 > 0
       ? "Up"
       : "Down";
-  };
+  }
+  
   render() {
     return (
       <div
@@ -147,6 +151,6 @@ export default class extends React.Component {
       >
         {this.props.children}
       </div>
-    );
+    )
   }
 }

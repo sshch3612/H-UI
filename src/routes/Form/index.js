@@ -38,6 +38,9 @@ function Base(props) {
         <Wingblank>
         <Link to='/textarea'><ListItem arrow>TextArea 多行文本框</ListItem></Link>
         </Wingblank>
+        <Wingblank>
+        <Link to='/range'><ListItem arrow>Range 范围选择器</ListItem></Link>
+        </Wingblank>
       </List>
     </div>
   );

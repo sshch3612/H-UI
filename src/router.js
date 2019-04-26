@@ -2,10 +2,9 @@ import React from "react";
 import { routerRedux, Router, Route, Switch, withRouter } from "dva/router";
 import dynamic from "dva/dynamic";
 import "./index.less";
-import Loadable from "./components/Loadable/Loadable";
+import { Loadable} from "./components/Common";
 import routeData from "./routes.config.js";
-import Icon from "./components/Icon";
-import Navbar from "./components/Navbar/Navbar";
+import { Navbar } from "./components/View";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const { ConnectedRouter } = routerRedux;

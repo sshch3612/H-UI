@@ -1,5 +1,4 @@
-import Loadable from './components/Loadable/Loadable';
-import Icon from './components/Icon'
+import {Loadable} from './components/Common';
 
 const routeDate = [
   {
@@ -77,9 +76,14 @@ const routeDate = [
     component:Loadable(() => import('./components/Form/DatePickerView')),
   },
   {
-    name: 'Tex',
+    name: 'Textarea',
     path: '/textarea',
     component:Loadable(() => import('./components/Form/Input/Textarea_test')),
+  },
+  {
+    name: 'Range',
+    path: '/range',
+    component:Loadable(() => import('./components/Form/Range')),
   },
   {
     name: 'List',

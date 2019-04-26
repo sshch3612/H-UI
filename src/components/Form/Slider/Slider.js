@@ -40,21 +40,25 @@ export default class extends React.Component {
     //滑动的间隔数
     // const {} = this.sliderSelf
     const {onChange ,min, max , step} = this.props;
-    const move = x /this.lineWidth + this.state.currentSite;
-    
-    if(move< 0 || move > 1) return;
-    const value = Math.round(move * (max - min)/step) * step + min;
+    let move = x /this.lineWidth + this.state.currentSite;
+    let value = Math.round(move * (max - min)/step) * step + min;
+    if(move < 0){
+      move = 0;
+      value = min;
+    } 
+    if(move > 1){
+      move = 1;
+      value = max;
+    } 
     this.setState({
       leftWidth: move,
       showNumber: value,
     },()=>{
-      // const value = Math.round(this.state.leftWidth * (max - min)/step) * step + min;
-      console.log(value,44);
       onChange && onChange(value);
     })
   };
 
-  handleTouchend = (e) => {
+  handleTouchend = (x,y) => {
     this.setState({
       currentSite: this.state.leftWidth
     })
