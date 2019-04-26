@@ -49,7 +49,7 @@ export default class extends React.Component {
       itemActive
     } = this.state;
     return (
-      <Portarl mask={true}>
+      <Portarl mask={true} onClose={this._closePicker}>
       <div className="datepicker">
         <div className="datepicker-container">
           <div className="datepicker-datecontrol">

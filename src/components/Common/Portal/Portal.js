@@ -21,10 +21,12 @@ export default class extends React.Component {
     document.body.removeChild(this.el);
   }
   _renderNodes = () => {
-    const { children , mask} = this.props;
+    const { children , mask, onClose} = this.props;
     const Ele = (
       <div className="portal-container">
-        {mask && <div className="portal-mask" />}
+        {mask && <div className="portal-mask" onClick={()=>{
+          onClose();
+        }}/>}
         {children}
       </div>
     );
