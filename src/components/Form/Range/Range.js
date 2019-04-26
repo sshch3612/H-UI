@@ -10,7 +10,10 @@ export default class extends React.Component {
     step: 2,
     defaultValue:[10,50],//默认值 
     disabled: false,//
-    showvalue:true,
+    showvalue:false,
+    handleStyle:null,//滑块的样式
+    trackStyle:null,//选中部分滑动条的样式
+    railStyle:null,//未选中部分
   };
   constructor(props){
     super(props);
@@ -30,10 +33,22 @@ export default class extends React.Component {
 
   handleTap = (e) => {
     e.preventDefault();
+    const { min, max, step,onChange} = this.props;
     const move=  (e.pageX - this.lineLeft)/this.lineWidth;
-    this.setState({
-      leftWidth: move,
-      currentSite: move,
+    const value = Math.round(move * (max - min)/step) * step + min;
+    const random  =  Math.round(Math.random());
+    this.setState((prestate,props)=>({
+      leftWidth: prestate.leftWidth.map((item,index)=>{
+        return random === index? move: item;
+      }),
+      currentSite:  prestate.leftWidth.map((item,index)=>{
+        return random === index? move: item;
+      }),
+      showNumber: prestate.showNumber.map((item,index)=>{
+        return random===index? value:item
+      }),
+    }),()=>{
+      onChange && onChange(this.state.showNumber);
     })
   }
 
@@ -60,7 +75,6 @@ export default class extends React.Component {
       }),
     }),()=>{
       // const value = Math.round(this.state.leftWidth * (max - min)/step) * step + min;
-      console.log(44444,this.state.showNumber,index,value);
       onChange && onChange(this.state.showNumber);
     })
   };
@@ -73,7 +87,7 @@ export default class extends React.Component {
 
   render() {
     const { leftWidth, showNumber } = this.state;
-    const { disabled ,showvalue} = this.props;
+    const { disabled ,showvalue,handleStyle ,trackStyle, railStyle} = this.props;
     // const rightWidht = 1 - leftWidth
     return (
       <div className='range'>
@@ -85,10 +99,11 @@ export default class extends React.Component {
             className="range-line"
             onClick={this.handleTap}
           />
-          <div className="range-line-light" style={{ left: `${Math.min(...leftWidth) * 100}%`,width: `${(Math.max(...leftWidth)-Math.min(...leftWidth)) * 100}%` }}/>
+          <div className="range-line-content" style={{backgroundColor:railStyle}}/>
+          <div className="range-line-light" style={{ left: `${Math.min(...leftWidth) * 100}%`,width: `${(Math.max(...leftWidth)-Math.min(...leftWidth)) * 100}%` ,backgroundColor:trackStyle}}/>
           {leftWidth.map((item,index)=>{
             return <Touch onMove={this.handleonMove.bind(this,index)} onTouchEnd={this.handleTouchend}>
-            <div className="range-line-control" style={{left:`${item * 100}%`}}/>
+            <div className="range-line-control" style={{left:`${item * 100}%`,backgroundColor:handleStyle}}/>
           </Touch>
           })}
           

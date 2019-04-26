@@ -21,11 +21,11 @@
   }
   &-line{
     height: @lineheight;
-    background-color:@gray-color;
+    background-color:transparent;
     position: absolute;
     top:0;
     width: 100%;
-    // z-index: 1;
+    z-index: 1;
   }
 
   &-line-light{
@@ -34,7 +34,13 @@
     position: absolute;
     top:0;
   }
-
+  &-line-content{
+    height: @lineheight;
+    background-color:@gray-color;
+    position: absolute;
+    top:0;
+    width: 100%;
+  }
   &-line-control{
     height:32px;
     width:32px;
