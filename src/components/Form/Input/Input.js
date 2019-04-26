@@ -20,7 +20,7 @@ export default class extends React.Component {
     // defaultValue: '',
     // value: '',
     disabled: false,
-    remove: false,
+    remove: true,
   };
 
   state = {
@@ -38,6 +38,10 @@ export default class extends React.Component {
     if (value) {
       this.setState({
         clear: true
+      });
+    }else{
+      this.setState({
+        clear: false
       });
     }
     const { onChange } = this.props;
