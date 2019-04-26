@@ -1,0 +1,31 @@
+@import '../../theme.less';
+.radio-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0; //默认radio隐藏掉
+}
+
+.radio-checkd {
+  display: none;
+  height: 22px;
+  width: 22px;
+  position: relative;
+  &::after{
+    content: " ";
+    display:inline-block;
+    border:1.5px solid @base-color;
+    border-left-width: 0;
+    border-top-width: 0;
+    height:17px;
+    width: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+
+  }
+  &-active{
+    display: inline-block;
+  }
+}

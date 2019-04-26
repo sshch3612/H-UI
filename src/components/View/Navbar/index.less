@@ -1,0 +1,39 @@
+@import '../../theme.less';
+
+.navbar{
+  height:45px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding:0 15px;
+  width:100%;
+  left:0;
+  top:0;
+  z-index: 555;
+  
+  &-left,&-title,&-right{
+    display: flex;
+    flex:1;
+    align-items: center;
+  }
+
+  &-left{
+    font-size:16px;
+  }
+  &-title{
+    font-size:18px;
+    justify-content: center;
+  }
+  &-right{
+    justify-content: flex-end;
+  }
+  &-dark{
+    background-color: @base-color;
+    color:#fff;
+  }
+  &-light{
+    background-color: #fff;
+    color:#000;
+    border-bottom: 1px solid #c0c0c0;
+  }
+}

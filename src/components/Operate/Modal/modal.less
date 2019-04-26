@@ -1,0 +1,69 @@
+@import '../../theme.less';
+.model-mask{
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:rgba(0,0,0,.6);
+  z-index: 888;
+}
+.model{
+  width: 300px;
+  max-width: 85%;
+  position: fixed;
+  left:50%;
+  top:50%;
+  transform: translate3d(-50%,-50%,0);
+  background-color: #ffffff;
+  color:#000000;
+  font-size:18px;
+  border-radius: 5px;
+  z-index: 889;
+  text-align: center;
+}
+.model-header{
+  padding:15px 15px 0;
+  h3{
+    font-weight: normal;
+  }
+}
+.model-content{
+  padding:16px 15px;
+  min-height: 44px;
+  font-weight: normal;
+  color:#999;
+  &-item{
+    padding:4px 6px;
+  }
+}
+.model-actions{
+  display: flex;
+  height:48px;
+  align-items: center;
+  border-top:.5px solid #d6d3d3;
+  &-btn{
+    flex:1;
+    flex-shrink: 0;
+    padding:0 15px;
+    color:@base-color;
+  }
+}
+.model-actions-alert{
+  flex-direction: row;
+}
+.model-actions-confirm{
+  flex-direction: row;
+}
+.model-actions-confirm{
+  flex-direction: row;
+}
+.model-actions-prompt{
+
+}
+.model-actions-btn{
+  flex:1;
+  flex-shrink: 0;
+  padding:0 15px;
+  color:@base-color;
+}

@@ -1,0 +1,38 @@
+.popover{
+  position: absolute;
+  background-color:#35495e;
+  border-radius: 5px;
+  color:#fff;
+  z-index:999 !important;
+  &-arrow{
+    height: 7px;
+    width: 7px;
+    position: absolute;
+    background-color:#35495e;
+    &-right{
+      left:0;
+      top:50%;
+      transform: translate3d(-50%,-50%,0) rotate(45deg);
+    }
+    &-left{
+      right:0;
+      top:50%;
+      transform: translate3d(50%,-50%,0) rotate(45deg); 
+    }
+    &-top{
+      left:50%;
+      bottom: 0;
+      transform: translate3d(-50%,50%,0) rotate(45deg);
+    }
+    &-bottom{
+      left:50%;
+      top:0;
+      transform: translate3d(-50%,-50%,0) rotate(45deg);
+    }
+  }
+
+  &-content{
+    padding:5px 10px;
+    font-size:12px;
+  }
+}

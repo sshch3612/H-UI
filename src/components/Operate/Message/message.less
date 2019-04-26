@@ -1,0 +1,62 @@
+@import '../../theme.less';
+
+.message-animate{
+  padding:16px 15px;
+  box-sizing: border-box;
+  height: 44px;
+  font-weight: normal;
+  color:#999;
+  position: absolute;
+  top:44px;
+  width:100%;
+  z-index: 888;
+  background-color: @base-color;
+  color:#fff;
+  text-align: center;
+}
+// .message-content{
+//   padding:16px 15px;
+//   box-sizing: border-box;
+//   height: 44px;
+//   font-weight: normal;
+//   color:#999;
+//   position: absolute;
+//   top:100px;
+//   width:100%;
+//   z-index: 1000 !important;
+//   background-color: @base-color;
+// }
+
+@keyframes translateDown {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.translateDown {
+  animation-name: translateDown;
+}
+@keyframes translateUp {
+  from {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+.translateUp {
+  animation-name: translateUp;
+}
+

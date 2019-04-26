@@ -1,0 +1,31 @@
+.segment{
+  min-height: 27px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  &-item{
+    display: flex;
+    flex:1;
+    align-items:center;
+    justify-content: center;
+    border: 1px solid #108ee9;
+    border-left-width: 0;
+    color:#108ee9;
+    background-color:transparent;
+    font-size:14px;
+    line-height: 1;
+    transition: all .2s;
+    &-active{
+      color:#ffffff;
+      background-color:#108ee9;
+      transition: all .2s;
+    }
+    &:first-child{
+      border-radius: 5px 0 0 5px;
+      border-left-width: 1px;
+    }
+    &:last-child{
+      border-radius:0 5px 5px 0;
+    }
+  }
+}

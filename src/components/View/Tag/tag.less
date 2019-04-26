@@ -1,0 +1,31 @@
+@import "../../theme.less";
+
+
+.tag{
+  display: inline-block;
+  line-height: 1.2;
+  background-color:#DBDBDB;
+  color:#000000;
+  border-radius: 1px;
+  cursor:pointer;
+  &-normal{
+    font-size:14px;
+    padding:7px 15px;
+  }
+  &-small{
+    font-size:12px;
+    padding:3px 10px;
+  }
+  &-ellipse{
+    border-radius: 16px;
+  }
+  &-border{
+    color:@base-color;
+    border:.5px solid @base-color;
+    background-color:#fff;
+  }
+  &-fill{
+    background-color:@base-color;
+    color:#fff;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "es2015",//模块加载方式
+    "target": "es5",
+    "allowJs": true,//输入来源接受js
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,//允许import React from “react”
+    "jsx": "react",
+    "declaration": false,
+    "experimentalDecorators":true,//编译装饰器
+    "emitDecoratorMetadata":true,
+    "baseUrl": "./src",
+    "paths": {
+      "@/*":["./*"]
+    },
+    "lib": ["es5","es6","es7","dom"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src/routes/**/*"]
+}

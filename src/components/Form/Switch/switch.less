@@ -1,0 +1,48 @@
+@import '../../theme.less';
+@height:32px;
+@width:64px;
+.switch{
+  input{
+    display: none;
+  }
+  .checkbox{
+    box-sizing: content-box;
+    display: inline-block;
+    width:@width;
+    height:@height;
+    border-radius: @height/2;
+    background-color:transparent;
+    // position: relative;
+    transition: all .3s ;
+    border:.5px solid #c0c0c0;
+    cursor:pointer;
+    &>span{
+      display: inline-block;
+      height: @height;
+      width:@height;
+      border-radius: 50%;
+      background-color:#ffffff;
+      position: absolute;
+      transition: all .3s ;
+      box-shadow: 1px 1px 1px #c0c0c0;
+    }
+    &-active{
+      background-color:@base-color ;
+      border-color:@base-color;
+      &>span{
+        transform: translateX(@width - @height)
+      }
+    }
+    &-disabled{
+      opacity: .4;
+    }
+    // &-mask{
+    //   position: absolute;
+    //   left:0;
+    //   top:0;
+    //   right:0;
+    //   bottom:0;
+    //   z-index: 555;
+    // }
+  }
+}

@@ -1,0 +1,43 @@
+.pagination{
+  display: flex;
+  font-size:16px;
+  flex-direction: row;
+  align-items:center;
+  justify-content: center;
+  color: #000000;
+  &-pre,&-number,&-next{
+    display: flex;
+    flex:1;
+  }
+  &-pre{
+    flex:1;
+  }
+
+  &-number{
+    flex:1;
+    justify-content: center;
+  }
+
+  &-next{
+    flex:1;
+    justify-content: flex-end;
+  }
+  &-dot{
+    display:inline-block;
+    zoom: 1;
+    &>span{
+      display:block; 
+      height: 16px;
+      width:16px;
+      margin-right: 5px;
+      border-radius: 50%;
+      background: #ccc;
+      cursor: pointer;
+    }
+    &-active{
+      &>span{
+        background:#888;
+      }
+    }
+  }
+}

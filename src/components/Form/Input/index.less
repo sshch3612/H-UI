@@ -1,0 +1,94 @@
+.form-control{
+  display: flex;
+  box-sizing: border-box;
+  font-size:17px;
+  font-weight: normal;
+  background-color: #ffffff;
+  align-items: center;
+  &-disabled{
+    opacity: .4;
+  }
+  .input-control{
+    flex:1;
+      input{
+        width: 100%;
+        padding:2px 0;
+        background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+        border:none;
+        outline: none;
+        font-size: 17px;
+        line-height: 1;
+        -webkit-appearance:none;
+        &::placeholder{
+          color:rgba(0,0,0,.3);
+        }
+      }
+      &-mask{
+        position: absolute;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+        z-index: 555;
+      }
+      textarea{
+        display: inline-block;
+        box-sizing: border-box;
+        width:100%;
+        height: 64px;
+        outline: none;
+        font-size:17px;
+        font-weight: normal;
+        resize:none;
+      }
+  }
+  .addBefore{
+    width:85px;
+    font-size: 17px;
+    margin-left: 0;
+    margin-right: 15px;
+    line-height: 1.12;
+    text-align: left;
+    white-space: normal;//换行
+    overflow: hidden;
+  }
+  &-clear{
+    width: 16px;
+    height: 16px;
+    position: relative;
+    border-radius: 50% 50%;
+    background-color:rgba(0,0,0,.2);
+    transform: rotate(45deg);
+    &::before{
+      content: '';
+      position: absolute;
+      width:10px;
+      height:1px;
+      left:50%;
+      top:50%;
+      transform: translate3d(-50%,-50%,0);
+      background-color:#fff;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      width:1px;
+      height:10px;
+      left:50%;
+      top:50%;
+      transform: translate3d(-50%,-50%,0);
+      background-color:#fff;
+    }
+  }
+}
+.input-control-error{
+  font-size: 13px;
+  line-height: 1.2;
+  color:#f3663c;
+  padding-left:100px;
+}
+.input-control-total{
+  text-align: right;
+  color:#c0c0c0;
+}
+

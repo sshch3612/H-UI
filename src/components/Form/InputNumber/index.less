@@ -1,0 +1,68 @@
+@import '../../theme.less';
+@height:30px;
+.inputnumber{
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  border: 1px solid #c0c0c0;
+  position: relative;
+  &-disabled{
+    opacity: .4;
+  }
+  &-content{
+    min-width: 44px;
+    text-align: center;
+  }
+  &-left{
+    height: @height;
+    width:@height;
+    position: relative;
+    border-right: 1px solid #c0c0c0;
+    &::before{
+      content: '';
+      height: 2px;
+      width:16px;
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate3d(-50%,-50%,0);
+      background-color: @base-color;
+    }
+
+  }
+  &-right{
+    height: @height;
+    width:@height;
+    position: relative;
+    border-left: 1px solid #c0c0c0;
+    &::before{
+      content: '';
+      height: 2px;
+      width:16px;
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate3d(-50%,-50%,0);
+      background-color: @base-color;
+    }
+
+    &::after{
+      content: '';
+      height: 16px;
+      width:2px;
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate3d(-50%,-50%,0);
+      background-color: @base-color;
+    }
+  }
+  &-mask{
+    position: absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom: 0;
+    z-index: 555;
+  }
+}
