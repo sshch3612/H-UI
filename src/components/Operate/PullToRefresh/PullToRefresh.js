@@ -46,7 +46,8 @@ export default class PullToRefresh extends React.Component {
     this.state = {
       pulldistance: 0,
       pullUpStatus:this.pullUp.Refresh,
-      pullDownStatus:null,
+      pullDownStatus:this.pullDown.Refresh,
+      loadMoreStatus:false,
     };
     this.resetData.bind(this)
   }
@@ -54,7 +55,6 @@ export default class PullToRefresh extends React.Component {
 
   handleTouchStart = e => {
     //记住scrollTop 的高度/触摸位置
-    //
     if(!this._isRefresh){
       this._scrollTop = e.currentTarget.scrollTop;
       this._startY = e.touches[0].pageY;
@@ -115,7 +115,29 @@ export default class PullToRefresh extends React.Component {
     }
     
   };
-
+  handleScroll = (e) => {
+    console.log(9999,this.isScroll,this.state.loadMoreStatus);
+    if(!this.state.loadMoreStatus){
+      const {scrollTop,scrollHeight,clientHeight}  = e.currentTarget;
+      const {onLoadMore } = this.props;
+      console.log(scrollTop,clientHeight,scrollHeight)
+      if(scrollTop + clientHeight + 20 >=scrollHeight){
+        console.log(34334)
+        this.setState({
+          loadMoreStatus: true,
+          pullDownStatus:this.pullDown.Load,
+        },()=>{
+          onLoadMore && onLoadMore(this);
+         })
+      }
+    }
+  }
+  resetLoadData = () => {
+    this.setState({
+      loadMoreStatus: false,
+      pullDownStatus:this.pullDown.Refresh,
+    })
+  }
   resetData = ( ) => {
     this._isReadyrefresh = false;
     this._isRefresh = false;
@@ -132,13 +154,18 @@ export default class PullToRefresh extends React.Component {
   }
 
   render() {
-    const { pulldistance, pullUpStatus } = this.state;
+    const { pulldistance, pullUpStatus,pullDownStatus } = this.state;
+    const { children } = this.props;
     const pullStyle = {
       // height: `${pulldistance}px`,
+      
       transform: `translate3d(0,${pulldistance}px,0)`
     };
     return (
-      <div className='pull-to-refresh-content-wrapper'>
+      <div className='pull-to-refresh-content-wrapper'
+        onScroll={this.handleScroll} 
+        style={{height:'200px'}}
+      >
         <div
           className="pull-to-refresh-content"
           onTouchStart={this.handleTouchStart}
@@ -149,7 +176,10 @@ export default class PullToRefresh extends React.Component {
           <div className="pull-to-refresh-indicator">
             {pullUpStatus}
           </div>
-          {this.props.children}
+          {children}
+          <div className="pull-to-refresh-drop">
+            {pullDownStatus}
+          </div>
         </div>
       </div>
     );
