@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
-import { CSSTransition } from 'react-transition-group';
+import React, { ReactElement } from "react";
+import classnames from "classnames";
+import { CSSTransition } from "react-transition-group";
 
-
-import './index.less'
+import "./index.less";
 
 /**
  *open
@@ -11,21 +11,76 @@ import './index.less'
  * @class
  * @extends {React.Component<drawerProps>}
  */
-export default class extends React.Component{
-
+export default class extends React.Component {
   static defaultProps = {
-    slidebar: <span>fewfewge</span>,
-    open: false
+    open: false,
+    place: "left"
+  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      height: null
+    };
   }
-
-  render(){
-    const { slidebar, open} = this.props;
-    // if(!open) return null;
-    return <div style={{position:'relative',height:'150px',overflow:'hidden'}}>
-      {open && <div className='drawer-overlay'></div>}
-      <CSSTransition in={open} timeout={200} classNames="my-node" unmountOnExit>
-        <div className='drawer-content'>{slidebar}</div>
-      </CSSTransition>
-    </div>
+  //<div className={classnames('drawer',className)} {...restPorps}>
+  render() {
+    const {
+      children,
+      place,
+      open,
+      className,
+      onClose,
+      style,
+      ...restPorps
+    } = this.props;
+    const { height } = this.state;
+    const drawerStyle = {
+      height: height,
+      ...style
+    };
+    return (
+      <div
+        className={classnames("drawer", className)}
+        {...restPorps}
+        style={drawerStyle}
+      >
+        {open && (
+          <div
+            className="drawer-overlay"
+            onClick={() => {
+              onClose();
+            }}
+          />
+        )}
+        <CSSTransition
+          in={open}
+          timeout={200}
+          classNames={classnames({
+            "my-node": place === "left",
+            "drawer-right": place === "right"
+          })}
+          onEnter={() => {
+            this.setState({
+              height: "100%"
+            });
+          }}
+          onExited={() => {
+            this.setState({
+              height: null
+            });
+          }}
+          unmountOnExit
+        >
+          <div
+            className={classnames({
+              "drawer-content-left": place === "left",
+              "drawer-content-right": place === "right"
+            })}
+          >
+            {children}
+          </div>
+        </CSSTransition>
+      </div>
+    );
   }
 }

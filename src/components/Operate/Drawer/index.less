@@ -1,43 +1,99 @@
-.drawer-overlay{
+.drawer {
   position: absolute;
-  left:0;
-  right:0;
   top:0;
-  bottom:0;
-  background-color:rgba(0,0,0,.3);
-  z-index: 888;
-}
-.drawer-content{
-  position: relative;
-  width:70%;
-  z-index: 1000 !important;
-}
-.drawer-enter{
-   opacity:0;
-}
-.drawer-enter-active{
-  opacity:1;
-  transition: all 1s;
+  left:0;
+  width:100%;
+  z-index: 666;
+  &-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 888 !important;
+  }
+  &-content-left{
+    position: relative;
+    left:0;
+    top:0;
+    width: 70%;
+    height: 100%;
+    z-index: 1000 !important;
+    background-color: #fff;
+  }
+  &-content-right {
+    position: relative;
+    right:0;
+    top:0;
+    margin-left: 30%;
+    width: 70%;
+    height: 100%;
+    z-index: 1000 !important;
+    background-color: #fff;
+  }
+
+  &-enter {
+    position: absolute;
+    opacity: 0;
+  }
+  &-enter-active {
+    opacity: 1;
+    transition: all 1s;
+  }
 }
 
 .my-node-enter {
-   transform:translateX(-100%);
+  transform: translateX(-100%);
 }
+
 .my-node-enter-active {
-  transform:translateX(0);
+  transform: translateX(0);
   transition: all 300ms ease-out;
 }
-.my-node-enter-done{
-  transform:translateX(0);
-  position: relative;
+
+.my-node-enter-done {
+  transform: translateX(0);
+  // position: relative;
 }
+
 .my-node-exit {
-  transform:translateX(0);
+  transform: translateX(0);
 }
+
 .my-node-exit-active {
-  transform:translateX(-100%);
+  transform: translateX(-100%);
   transition: all 300ms ease-in;
 }
-.my-node-exit-done{
-  transform:translateX(-100%);
+
+.my-node-exit-done {
+  transform: translateX(-100%);
+}
+
+.drawer-right-enter {
+  transform: translateX(100%);
+}
+
+.drawer-right-enter-active {
+  transform: translateX(0);
+  transition: all 300ms ease-out;
+}
+
+.drawer-right-enter-done {
+  transform: translateX(0);
+  position: absolute;
+  // position: relative;
+}
+
+.drawer-right-exit {
+  transform: translateX(0);
+}
+
+.drawer-right-exit-active {
+  transform: translateX(100%);
+  transition: all 300ms ease-in;
+}
+
+.drawer-right-exit-done {
+  transform: translateX(-100%);
 }
