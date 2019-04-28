@@ -10,18 +10,20 @@
   position: relative;
    overflow-x: auto;
   &-item {
+    box-sizing: border-box;
     flex: 1 0 0;
     position: relative;
     text-align: center;
-    font-size: 15px;
-    line-height: 1.42;
-    padding: 10px 0;
+    font-size: 17px;
+    height: 44px;
+    line-height: 44px;
+    // line-height: 1.42;
     flex-basis:20%;
     cursor: pointer;
     &-active {
       color: #108ee9
     }
-    &-line-left {
+    &-top-leftline {
       position: absolute; // border: 1px solid #108ee9;
       height: 1px;
       bottom: 0;
@@ -33,7 +35,7 @@
         width: 50%;
       }
     }
-    &-line-right {
+    &-top-rightline {
       position: absolute; // border: 1px solid #108ee9;
       height: 1px;
       bottom: 0;
@@ -43,6 +45,78 @@
       transition: all .4s linear;
       &-active {
         width: 50%;
+      }
+    }
+    &-bottom-leftline {
+      position: absolute; // border: 1px solid #108ee9;
+      height: 1px;
+      top: 0;
+      right: 50%;
+      background-color: #108ee9;
+      width:0;
+      transition: all .4s linear;
+      &-active {
+        width: 50%;
+      }
+    }
+    &-bottom-rightline {
+      position: absolute; // border: 1px solid #108ee9;
+      height: 1px;
+      top: 0;
+      left: 50%;
+      background-color: #108ee9;
+      width:0;
+      transition: all .4s linear;
+      &-active {
+        width: 50%;
+      }
+    }
+    &-left-leftline {
+      position: absolute; // border: 1px solid #108ee9;
+      height: 0;
+      right: 0;
+      bottom:50%;
+      background-color: #108ee9;
+      width:1px;
+      transition: all .4s linear;
+      &-active {
+        height: 50%;
+      }
+    }
+    &-left-rightline {
+      position: absolute; // border: 1px solid #108ee9;
+      height: 0;
+      right: 0;
+      top:50%;
+      background-color: #108ee9;
+      width:1px;
+      transition: all .4s linear;
+      &-active {
+        height: 50%;
+      }
+    }
+    &-right-leftline {
+      position: absolute; // border: 1px solid #108ee9;
+      height: 0;
+      left: 0;
+      bottom:50%;
+      background-color: #108ee9;
+      width:1px;
+      transition: all .4s linear;
+      &-active {
+        height: 50%;
+      }
+    }
+    &-right-rightline {
+      position: absolute; // border: 1px solid #108ee9;
+      height: 0;
+      left: 0;
+      top:50%;
+      background-color: #108ee9;
+      width:1px;
+      transition: all .4s linear;
+      &-active {
+        height: 50%;
       }
     }
   }
@@ -89,8 +163,14 @@
   flex-direction: row;
   &>.tabs-header {
     min-width: 65px;
+    height: 220px;
     display: flex;
     flex-direction: column;
+    // &>.tabs-header-item{
+    //   // height: 44px;
+    //   // flex:0;
+    //   // color:red;
+    // }
   }
   &>.tabs-content-wrap {
     flex: 1;

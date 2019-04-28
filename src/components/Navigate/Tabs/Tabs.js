@@ -27,7 +27,7 @@ export default class extends React.Component {
     };
   }
   _renderTabsTitle = () => {
-    const { tabs, onTabClick, titleStyle } = this.props;
+    const { tabs, onTabClick, titleStyle, position } = this.props;
     const { currentIndex } = this.state;
 
     return tabs.map((item, index) => {
@@ -44,19 +44,23 @@ export default class extends React.Component {
             });
             if (onTabClick) {
               onTabClick(item, index);
-            }
+            };
+            const { scrollWidth, scrollHeight,clientWidth,clientHeight } = this.selfHeader;
+            const eleWidth = scrollWidth / tabs.length;
+            const eleHeight = scrollHeight / tabs.length;
+            this.selfHeader.scrollTo({left:eleWidth*(index-2),top:eleHeight*(index-2),behavior:'smooth'});
           }}
           // style={titleStyle}
         >
           {item.title}
           <span
-            className={classnames("tabs-header-item-line-left", {
-              "tabs-header-item-line-left-active": currentIndex === index
+            className={classnames(`tabs-header-item-${position}-leftline`, {
+              [`tabs-header-item-${position}-leftline-active`]: currentIndex === index
             })}
           />
           <span
-            className={classnames("tabs-header-item-line-right", {
-              "tabs-header-item-line-right-active": currentIndex === index
+            className={classnames(`tabs-header-item-${position}-rightline`, {
+              [`tabs-header-item-${position}-rightline-active`]: currentIndex === index
             })}
           />
         </div>
@@ -85,7 +89,7 @@ export default class extends React.Component {
 
   _renderTabs = () => {
     return (
-      <div className="tabs-header">
+      <div className="tabs-header" ref={(self)=>{this.selfHeader=self}} >
         {this._renderTabsTitle()}
         {/* {this._renderUnderLine()} */}
       </div>

@@ -27,14 +27,18 @@ export default class extends React.Component {
         </Whitespace>
         <Whitespace>
           <Wingblank>
-            <Tabs onTabClick={this.onTabClick} position="top" titleStyle={{flexBasis:'100px'}} tabs={[
+            <Tabs onTabClick={this.onTabClick} position="top"  tabs={[
       { title: "Tab1" },
       { title: "Tab2" },
       { title: "Tab3" },
       { title: "Tab4" },
       { title: "Tab5" },
       { title: "Tab6" },
-      { title: "Tab7" }
+      { title: "Tab7" },
+      { title: "Tab8" },
+      { title: "Tab9" },
+      { title: "Tab10" },
+      { title: "Tab11" }
     ]}>
               <div>page1</div>
               <div>page2</div>
@@ -43,16 +47,39 @@ export default class extends React.Component {
               <div>page5</div>
               <div>page6</div>
               <div>page7</div>
+              <div>page8</div>
+              <div>page9</div>
+              <div>page10</div>
+              <div>page11</div>
             </Tabs>
           </Wingblank>
         </Whitespace>
         <Whitespace>
           <Wingblank>
-          <Tabs onTabClick={this.onTabClick} position="left">
-              <div>page1</div>
+          <Tabs onTabClick={this.onTabClick} position="left" tabs={[
+      { title: "Tab1" },
+      { title: "Tab2" },
+      { title: "Tab3" },
+      { title: "Tab4" },
+      { title: "Tab5" },
+      { title: "Tab6" },
+      { title: "Tab7" },
+      { title: "Tab8" },
+      { title: "Tab9" },
+      { title: "Tab10" },
+      { title: "Tab11" }
+    ]}>
+             <div>page1</div>
               <div>page2</div>
               <div>page3</div>
               <div>page4</div>
+              <div>page5</div>
+              <div>page6</div>
+              <div>page7</div>
+              <div>page8</div>
+              <div>page9</div>
+              <div>page10</div>
+              <div>page11</div>
             </Tabs>
           </Wingblank>
         </Whitespace>
