@@ -27,15 +27,15 @@ export default class extends React.Component {
     };
   }
   _renderTabsTitle = () => {
-    const { tabs, onTabClick } = this.props;
+    const { tabs, onTabClick, titleStyle } = this.props;
     const { currentIndex } = this.state;
 
     return tabs.map((item, index) => {
       return (
         <div
-          className={`tabs-header-item ${
-            currentIndex === index ? "tabs-header-item-active" : ""
-          }`}
+          className={classnames("tabs-header-item", {
+            "tabs-header-item-active": currentIndex === index
+          })}
           key={index}
           onClick={e => {
             e.preventDefault();
@@ -46,8 +46,19 @@ export default class extends React.Component {
               onTabClick(item, index);
             }
           }}
+          // style={titleStyle}
         >
           {item.title}
+          <span
+            className={classnames("tabs-header-item-line-left", {
+              "tabs-header-item-line-left-active": currentIndex === index
+            })}
+          />
+          <span
+            className={classnames("tabs-header-item-line-right", {
+              "tabs-header-item-line-right-active": currentIndex === index
+            })}
+          />
         </div>
       );
     });
@@ -60,7 +71,7 @@ export default class extends React.Component {
     if (position === "top" || position === "bottom") {
       lineStyle = {
         left: `${(currentIndex * 100) / tabs.length}%`,
-        width: `${100 / tabs.length}%`,
+        width: `${100 / tabs.length}%`
       };
     }
     if (position === "left" || position === "right") {
@@ -76,7 +87,7 @@ export default class extends React.Component {
     return (
       <div className="tabs-header">
         {this._renderTabsTitle()}
-        {this._renderUnderLine()}
+        {/* {this._renderUnderLine()} */}
       </div>
     );
   };
@@ -114,10 +125,7 @@ export default class extends React.Component {
         : `translate3d(0,${-100 * currentIndex}%, 0)`;
     return (
       <div className="tabs-content-wrap">
-        <div
-          className="tabs-pane-wrap"
-          style={{ transform: translate3d}}
-        >
+        <div className="tabs-pane-wrap" style={{ transform: translate3d }}>
           {this._renderTabsPane()}
         </div>
       </div>
@@ -125,8 +133,12 @@ export default class extends React.Component {
   };
 
   render() {
-    const {position } = this.props;
+    const { position } = this.props;
     const { currentIndex } = this.state;
-    return <div className={classnames('tabs',`tabs-${position}`)}>{this._renderTabsPosition()}</div>;
+    return (
+      <div className={classnames("tabs", `tabs-${position}`)}>
+        {this._renderTabsPosition()}
+      </div>
+    );
   }
 }

@@ -15,13 +15,16 @@ function Base(props) {
       <List>
         <Whitespace>布局</Whitespace>
         <Wingblank>
-         <Link to='/spin'><ListItem arrow>Spin 加载图标</ListItem></Link> 
+         <Link to='/navbar'><ListItem arrow>NavBar 导航栏</ListItem></Link> 
         </Wingblank>
         <Wingblank>
-          <Link to='/tag'><ListItem arrow>Tag 标签</ListItem></Link>
+          <Link to='/pagination'><ListItem arrow>Pagination 分页器</ListItem></Link>
         </Wingblank>
         <Wingblank>
-          <ListItem arrow>Icon图标</ListItem>
+          <Link to='/segmented'><ListItem arrow>Segmented-Control 分段器</ListItem></Link>
+        </Wingblank>
+        <Wingblank>
+          <Link to='/tabs'><ListItem arrow>Tabs 标签页</ListItem></Link>
         </Wingblank>
       </List>
     </div>

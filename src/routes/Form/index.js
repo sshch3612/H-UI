@@ -41,6 +41,9 @@ function Base(props) {
         <Wingblank>
         <Link to='/range'><ListItem arrow>Range 范围选择器</ListItem></Link>
         </Wingblank>
+        <Wingblank>
+        <Link to='/searchbar'><ListItem arrow>SearchBar 搜索栏</ListItem></Link>
+        </Wingblank>
       </List>
     </div>
   );

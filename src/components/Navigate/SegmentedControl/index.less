@@ -1,23 +1,25 @@
+@import '../../theme.less';
 .segment{
   min-height: 27px;
   display: flex;
   flex-direction: row;
   border-radius: 5px;
+  position: relative;
   &-item{
     display: flex;
     flex:1;
     align-items:center;
     justify-content: center;
-    border: 1px solid #108ee9;
+    border: 1px solid @base-color;
     border-left-width: 0;
-    color:#108ee9;
+    color:@base-color;
     background-color:transparent;
     font-size:14px;
     line-height: 1;
     transition: all .2s;
     &-active{
       color:#ffffff;
-      background-color:#108ee9;
+      background-color:@base-color;
       transition: all .2s;
     }
     &:first-child{
@@ -27,5 +29,16 @@
     &:last-child{
       border-radius:0 5px 5px 0;
     }
+  }
+  &-disabled{
+    opacity: .4;
+  }
+  &-mask{
+    position:absolute;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    z-index: 2;
   }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "./modal";
 import {Button ,Icon } from "../../Base";
-import {Winblank} from "../../Layout";
+import {Wingblank} from "../../Layout";
 import {Table} from "../../View";
 import "../../markdown.less";
 
@@ -68,13 +68,13 @@ export default class extends React.Component {
     ];
     return (
       <div className='page-content'>
-        <Winblank >
+        <Wingblank >
           <h2>Modal 提示</h2>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>基本模态框</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <Button
             inline={true}
             fillColor="#fff"
@@ -134,11 +134,11 @@ export default class extends React.Component {
           >
             <span style={{ color: "#8f90f9" }}>Prompt 框</span>
           </Button>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>无标题</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <Button
             inline={true}
             fillColor="#fff"
@@ -151,11 +151,11 @@ export default class extends React.Component {
           >
             <span style={{ color: "#8f90f9" }}>无标题框</span>
           </Button>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>Modal Api</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <ul className="markdown">
             <li>
               <p>
@@ -173,7 +173,7 @@ export default class extends React.Component {
               </p>
             </li>
           </ul>
-        </Winblank>
+        </Wingblank>
         <Table columns={columns} datasource={datasource} />
       </div>
     );

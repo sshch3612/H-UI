@@ -5,7 +5,8 @@ import "./index.less";
 export default class extends React.Component {
   static defaultProps = {
     values: ["segment1", "segment2", "segment3"],
-    selectedIndex: 0
+    selectedIndex: 0,
+    disabled:false,
   };
 
   constructor(props) {
@@ -45,11 +46,12 @@ export default class extends React.Component {
     });
   };
   render() {
-    const { className, style } = this.props;
+    const { className, style ,disabled} = this.props;
 
     return (
-      <div className={classnames("segment", className)} style={style}>
+      <div className={classnames("segment", className,{'segment-disabled':disabled})} style={style}>
         {this._renderItem()}
+        {disabled && <div className='segment-mask'></div>}
       </div>
     );
   }

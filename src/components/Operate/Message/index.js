@@ -1,7 +1,7 @@
 import React from 'react';
 import Message from './Message';
 import {Button  } from "../../Base";
-import {Winblank} from "../../Layout";
+import {Wingblank} from "../../Layout";
 import {Table} from "../../View";
 import '../../markdown.less';
 
@@ -59,13 +59,13 @@ export default class extends React.Component{
     ]
     return(
       <div className='page-content'>
-        <Winblank >
-          <h2>Toast 提示</h2>
-        </Winblank>
-        <Winblank>
+        <Wingblank >
+          <h2>Message 提示</h2>
+        </Wingblank>
+        <Wingblank>
           <h3>基本案例</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
         <Button
             inline={true}
             fillColor="#fff"
@@ -106,21 +106,21 @@ export default class extends React.Component{
           >
             <span style={{ color: "#8f90f9" }}>警告消息</span>
           </Button>
-        </Winblank>  
-        <Winblank>
+        </Wingblank>  
+        <Wingblank>
           <h3>Api</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
         <ul className='markdown'>
           <li><p><code>Message.info(content, duration, onClose, color)</code></p></li>
           <li><p><code>Message.success(content, duration, onClose, color)</code></p></li>
           <li><p><code>Message.error(content, duration, onClose, color)</code></p></li>
           <li><p><code>Message.warning(content, duration, onClose, color)</code></p></li>
         </ul>
-        </Winblank>
+        </Wingblank>
         <Table columns={columns} datasource={datasource}/>
-        <Winblank>
-        </Winblank>
+        <Wingblank>
+        </Wingblank>
       </div>
     )
   }

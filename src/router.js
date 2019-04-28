@@ -4,7 +4,7 @@ import dynamic from "dva/dynamic";
 import "./index.less";
 import { Loadable} from "./components/Common";
 import routeData from "./routes.config.js";
-import { Navbar } from "./components/View";
+import { Navbar } from "./components/Navigate";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 const { ConnectedRouter } = routerRedux;

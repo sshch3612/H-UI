@@ -1,10 +1,6 @@
-import Navbar from './Navbar/Navbar';
-
-import Pagination from './Pagination/Pagination';
-import Tag from './Tag/Tag';
+import Spin from './Spin/Spin';
 import Table from './Table/Table';
+import Tag from './Tag/Tag';
 
 
-export {
-  Navbar, Pagination, Tag, Table
-}
+export {Spin, Table, Tag}

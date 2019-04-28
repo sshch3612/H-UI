@@ -19,7 +19,24 @@ const routeDate = [
     // exact:true
     component: Loadable(() => import("./routes/Form"))
   },
-
+  {
+    name:'View',
+    path:'/view',
+    // exact:true
+    component: Loadable(() => import("./routes/View"))
+  },
+  {
+    name:'Operate',
+    path:'/operate',
+    // exact:true
+    component: Loadable(() => import("./routes/Operate"))
+  },
+  {
+    name:'Navigate',
+    path:'/navigate',
+    // exact:true
+    component: Loadable(() => import("./routes/Navigate"))
+  },
   {
     name:'icon',
     path:'/icon',
@@ -41,6 +58,11 @@ const routeDate = [
     component:Loadable(() => import('./components/Operate/Modal')),
   },
   {
+    name:'PullToRefresh',
+    path:'/refresh',
+    component:Loadable(() => import('./components/Operate/PullToRefresh')),
+  },
+  {
     name: 'Popover',
     path: '/popover',
     component:Loadable(() => import('./components/Operate/Popover')),
@@ -49,6 +71,11 @@ const routeDate = [
     name: 'Message',
     path: '/message',
     component:Loadable(() => import('./components/Operate/Message')),
+  },
+  {
+    name: 'Drawer',
+    path: '/drawer',
+    component:Loadable(() => import('./components/Operate/Drawer')),
   },
   {
     name: 'Checkbox',
@@ -86,6 +113,11 @@ const routeDate = [
     component:Loadable(() => import('./components/Form/Range')),
   },
   {
+    name: 'SearchBar',
+    path: '/searchbar',
+    component:Loadable(() => import('./components/Form/SearchBar')),
+  },
+  {
     name: 'List',
     path: '/list',
     component:Loadable(() => import('./components/Layout/List')),
@@ -109,9 +141,36 @@ const routeDate = [
   }
   ,
   {
+    name: 'Spin',
+    path: '/spin',
+    component:Loadable(() => import('./components/View/Spin')),
+  }
+  ,
+  {
+    name: 'Tag',
+    path: '/tag',
+    component:Loadable(() => import('./components/View/Tag')),
+  }
+  ,
+  {
     name: 'Navbar',
     path: '/navbar',
-    component:Loadable(() => import('./components/View/Navbar')),
+    component:Loadable(() => import('./components/Navigate/Navbar')),
+  },
+  {
+    name: 'Pagination',
+    path: '/pagination',
+    component:Loadable(() => import('./components/Navigate/Pagination')),
+  },
+  {
+    name: 'Segmented',
+    path: '/segmented',
+    component:Loadable(() => import('./components/Navigate/SegmentedControl')),
+  },
+  {
+    name: 'Tabs',
+    path: '/tabs',
+    component:Loadable(() => import('./components/Navigate/Tabs')),
   }
 ]
 export default routeDate;

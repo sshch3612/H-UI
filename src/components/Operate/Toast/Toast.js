@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-import { Icon } from '../../Base';
+import { Iconfont } from '../../Base';
 import "./toast.less";
 
 export default (function() {
@@ -59,7 +59,7 @@ export default (function() {
     onClose = null,
     mask = true){
     const Elecontent = (<div className='toast-success'>
-      <Icon type='check-circle' size='84' color='#ffffff'/>
+      <Iconfont type='success' size='84' color='#ffffff'/>
       <span>{content}</span>
     </div>)
     this.info(Elecontent,duration,onClose,mask);
@@ -71,7 +71,7 @@ export default (function() {
     onClose = null,
     mask = true){
     const Elecontent = (<div className='toast-fail'>
-      <Icon type='close-circle' size='84' color='#ffffff'/>
+      <Iconfont type='delete' size='84' color='#ffffff'/>
       <span>{content}</span>
     </div>)
     this.info(Elecontent,duration,onClose,mask);
@@ -84,7 +84,7 @@ export default (function() {
     mask = true
   ){
     const Elecontent = (<div className='toast-loading'>
-      <Icon type='reload' size='84' color='#ffffff'/>
+      <div className='toast-loading-icon'></div>
       <span>{content}</span>
     </div>)
     this.info(Elecontent,duration,onClose,mask);

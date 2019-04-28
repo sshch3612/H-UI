@@ -2,7 +2,7 @@ import React from "react";
 import Popover from "./Popover";
 import { Button,Icon} from "../../Base";
 import {Tag， Icon , Table } from "../../View";
-import { Winblank } from "../../Layout";
+import { Wingblank } from "../../Layout";
 
 export default class extends React.Component {
   render() {
@@ -43,37 +43,37 @@ export default class extends React.Component {
     ]
     return (
       <div className="page-content">
-        <Winblank>
+        <Wingblank>
           <h3>Popover组件</h3>
-        </Winblank>
-        <Winblank style={{ textAlign: "center" }}>
+        </Wingblank>
+        <Wingblank style={{ textAlign: "center" }}>
           <Popover place={"top"} content={"粉丝看风景呃几个苦瓜"}>
             <Tag shape={"ellipse"} border>
               <span>上面显示</span>
             </Tag>
           </Popover>
-        </Winblank>
-        <Winblank style={{ textAlign: "center" }}>
+        </Wingblank>
+        <Wingblank style={{ textAlign: "center" }}>
           <Popover place={"bottom"} content={"粉丝看风景呃几个苦瓜"}>
             <Tag shape={"ellipse"} border>
               <span>下面显示</span>
             </Tag>
           </Popover>
-        </Winblank>
-        <Winblank style={{ textAlign: "center" }}>
+        </Wingblank>
+        <Wingblank style={{ textAlign: "center" }}>
           <Popover place={"left"} content={"粉丝看风景呃几个苦瓜"}>
             <Tag shape={"ellipse"} border>
               <span>左边显示</span>
             </Tag>
           </Popover>
-        </Winblank>
-        <Winblank style={{ textAlign: "center" }}>
+        </Wingblank>
+        <Wingblank style={{ textAlign: "center" }}>
           <Popover place={"right"} content={"粉丝看风景呃几个苦瓜"}>
             <Tag shape={"ellipse"} border>
               <span>右边显示</span>
             </Tag>
           </Popover>
-        </Winblank>
+        </Wingblank>
         <Table columns={columns} datasource={datasource}/>
       </div>
     );

@@ -3,7 +3,7 @@ import Toast from './Toast'
 import Ceshi from './ceshi'
 import Alert from './Alert'
 import {Iconfont,Button} from '../../Base';
-import {Winblank} from '../../Layout';
+import {Wingblank} from '../../Layout';
 import  { Table}  from '../../View';
 import '../../markdown.less';
 
@@ -61,13 +61,13 @@ export default class extends React.Component{
     ]
     return(
       <div className='page-content'>
-        <Winblank >
+        <Wingblank >
           <h2>Toast 提示</h2>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>基本案例</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <Button inline={true} fillColor='#fff' borderColor='#8f90f9' onClick={()=>{
               Toast.info('文本内容')
           }}>
@@ -78,41 +78,41 @@ export default class extends React.Component{
           }}>
             <span style={{ color: "#8f90f9" }}>文本 + ICON</span>
           </Button>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>Fail Toast</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
         <Button inline={true} fillColor='#fff' borderColor='#8f90f9' onClick={()=>{
               Toast.fail('错误提示')
           }}>
             <span style={{ color: "#8f90f9" }}>错误提示Toast</span>
           </Button>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>Success Toast</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
         <Button inline={true} fillColor='#fff' borderColor='#8f90f9' onClick={()=>{
               Toast.success('成功提示')
           }}>
             <span style={{ color: "#8f90f9" }}>正确提示Toast</span>
           </Button>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>Loading Toast</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
         <Button inline={true} fillColor='#fff' borderColor='#8f90f9' onClick={()=>{
               Toast.loading('正在加载...')
           }}>
             <span style={{ color: "#8f90f9" }}>加载中 Toast</span>
           </Button>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
           <h3>Api</h3>
-        </Winblank>
-        <Winblank>
+        </Wingblank>
+        <Wingblank>
         <ul className='markdown'>
           <li><p><code>Toast.info(content, duration, onClose, mask)</code></p></li>
           <li><p><code>Toast.success(content, duration, onClose, mask)</code></p></li>
@@ -120,13 +120,13 @@ export default class extends React.Component{
           <li><p><code>Toast.loading(content, duration, onClose, mask)</code></p></li>
           <li><p><code>Toast.hide()</code></p></li>
         </ul>
-        </Winblank>
+        </Wingblank>
         <Table columns={columns} datasource={datasource}/>
-        <Winblank>
+        <Wingblank>
         <p>
         注： duration = 0 时，onClose 无效，toast 不会消失；隐藏 toast 需要手动调用 hide
         </p>
-        </Winblank>
+        </Wingblank>
       </div>
     )
   }

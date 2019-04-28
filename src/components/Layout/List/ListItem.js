@@ -26,7 +26,7 @@ export default class extends React.Component {
     if (typeof arrow === "boolean") {
       Ele = (
         <div className="list-item-arrow">
-          <Iconfont type="right-circle" />
+          <Iconfont type="enter" />
         </div>
       );
     }else if(React.isValidElement(arrow)){

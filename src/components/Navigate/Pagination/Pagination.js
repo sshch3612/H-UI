@@ -11,7 +11,7 @@ export default class extends React.Component {
     };
   }
   static defaultProps = {
-    activeColor: "#108ee9",
+    activeColor: "#8f90f9",
     total: 5,
     numberShow: true,
     mode: 'button',
