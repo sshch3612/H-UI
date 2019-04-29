@@ -15,16 +15,13 @@ function Base(props) {
       <List>
         <Whitespace>基础</Whitespace>
         <Wingblank>
-         <Link to='/list'><ListItem arrow>List 列表</ListItem></Link> 
+         <Link to='/animate'><ListItem arrow={<Iconfont type={'enter'}/>}>Animate 动画</ListItem></Link> 
         </Wingblank>
         <Wingblank>
-          <Link to='/flex'><ListItem arrow>Flex 宫格布局</ListItem></Link>
+          {/* <Link to='/buttons'><ListItem arrow={<Iconfont type={'enter'}/>}>Button 按钮</ListItem></Link> */}
         </Wingblank>
         <Wingblank>
-          <Link to='/whitespace'><ListItem arrow>WhiteSpace 上下间隙</ListItem></Link>
-        </Wingblank>
-        <Wingblank>
-          <Link to='/wingblank'><ListItem arrow>WingBlank 左右留白</ListItem></Link>
+          {/* <ListItem arrow={<Iconfont type={'enter'}/>}>Icon图标</ListItem> */}
         </Wingblank>
       </List>
     </div>

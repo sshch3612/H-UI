@@ -21,7 +21,7 @@ function Base(props) {
           <Link to='/buttons'><ListItem arrow={<Iconfont type={'enter'}/>}>Button 按钮</ListItem></Link>
         </Wingblank>
         <Wingblank>
-          <ListItem arrow={<Iconfont type={'enter'}/>}>Icon图标</ListItem>
+          {/* <ListItem arrow={<Iconfont type={'enter'}/>}>Icon图标</ListItem> */}
         </Wingblank>
       </List>
     </div>

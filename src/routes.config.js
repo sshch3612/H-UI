@@ -14,6 +14,12 @@ const routeDate = [
     component: Loadable(() => import("./routes/Base"))
   },
   {
+    name:'Layout',
+    path:'/layout',
+    // exact:true
+    component: Loadable(() => import("./routes/Layout"))
+  },
+  {
     name:'Form',
     path:'/form',
     // exact:true
@@ -123,6 +129,11 @@ const routeDate = [
     component:Loadable(() => import('./components/Layout/List')),
   },
   {
+    name: 'Flex',
+    path: '/flex',
+    component:Loadable(() => import('./components/Layout/Grid')),
+  },
+  {
     name: 'List',
     path: '/radio',
     component:Loadable(() => import('./components/Form/Radio')),
@@ -171,6 +182,16 @@ const routeDate = [
     name: 'Tabs',
     path: '/tabs',
     component:Loadable(() => import('./components/Navigate/Tabs')),
+  },
+  {
+    name: 'Animate',
+    path: '/animate',
+    component:Loadable(() => import('./components/Highlevel/Animate')),
+  },
+  {
+    name: 'Highlevel',
+    path: '/highlevel',
+    component:Loadable(() => import('./routes/Highlevel')),
   }
 ]
 export default routeDate;

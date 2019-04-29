@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDom from "react-dom";
-import Animate, { Animation } from "../../Animate/Animate";
+import {Animate,  Animation } from "../../Highlevel";
 import "./message.less";
 
 export default (function() {

@@ -44,7 +44,7 @@ export default class extends React.Component {
       className,
       style,
       align,
-      disable,
+      disabled,
       ...restProps
     } = this.props;
     const listItemStyle = {
@@ -54,7 +54,7 @@ export default class extends React.Component {
     return (
       <div
         className={classnames("list-item", className, {
-          "list-item-disable": disable
+          "list-item-disable": disabled
         })}
         style={listItemStyle}
         {...restProps}
@@ -66,7 +66,7 @@ export default class extends React.Component {
         </div>
         <div className="list-item-extra">{extra}</div>
         {arrow && this.renderArrow()}
-        {disable && <div className="list-item-mask" />}
+        {disabled && <div className="list-item-mask" />}
       </div>
     );
   }

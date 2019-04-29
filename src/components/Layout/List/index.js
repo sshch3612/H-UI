@@ -1,6 +1,6 @@
 import React from 'react';
 import {Wingblank, List ,ListItem}   from '../../Layout';
-import  {Button}  from '../../Base';
+import  {Button,Iconfont}  from '../../Base';
 import { Textarea as TextArea , ImagePicker,createForm, InputItem} from '../../Form';
 
 export default  class  extends React.Component{
@@ -38,38 +38,27 @@ export default  class  extends React.Component{
           基础用法
         </Wingblank>
         <List>
-            <InputItem  addBefore={'标准五个字'} placeholder={'标准🈚️个字'}/>
-            <InputItem  addBefore={'标题是在特别长就换行'} placeholder={'其他路保持正常间距'}/>
-            <InputItem  placeholder={'无标题'}/>
-          <ListItem>
-          <Button inline={true} type='submit' value='提交' onClick={()=>{
-            const data = this.Form.getFieldsValue();
-            this.Form.globalVerify();
-            console.log(data,555);
-          }}>提交</Button>
-          </ListItem>
+          <ListItem ><span>标题文字</span></ListItem>
+          <ListItem  arrow><span>标题文字</span></ListItem>
+          <ListItem  arrow={<span>详细信息</span>}><span>标题文字</span></ListItem>
+          <ListItem  arrow={<span>详细信息</span>} disabled><span>标题文字</span></ListItem>
         </List>
         <Wingblank>
-          输入框类型
+          包含描述信息
         </Wingblank>
         <List>
-            <InputItem addBefore={'文本'} placeholder={'单行文本'}/>
-            <InputItem inputType={'number'} addBefore={'数字'} placeholder={'请输入数字'}/>
+          <ListItem brief={'描述信息'}><span>标题文字</span></ListItem>
+          <ListItem brief={'描述信息'} arrow><span>标题文字</span></ListItem>
+          <ListItem brief={'描述信息'} arrow={<span>详细信息</span>}><span>标题文字</span></ListItem>
         </List>
         <Wingblank>
-          状态
+          包含图片
         </Wingblank>
         <List>
-            <InputItem addBefore={'禁用'} disabled placeholder={'禁止输入'}/>
-            <InputItem error={'fef史可法'} addBefore={'错误提示'} placeholder={'标准🈚️个字'}/>
-            <InputItem  addBefore={'清除按钮'} placeholder={'标准🈚️个字'} remove/>
-          <ListItem>
-            <TextArea />
-          </ListItem>
+          <ListItem  thumb={<Iconfont type={'select'}/>} arrow><span>标题文字</span></ListItem>
+          <ListItem thumb={'http://pic34.nipic.com/20131026/9422601_213844930000_2.jpg'} brief={'描述信息'} arrow><span>标题文字</span></ListItem>
+          <ListItem thumb={'http://pic28.nipic.com/20130417/9545357_131100209130_2.jpg'} brief={'描述信息'} arrow={<span>详细信息</span>}><span>标题文字</span></ListItem>
         </List>
-        <ListItem>
-        <ImagePicker></ImagePicker>
-        </ListItem>
       </div>
     )
   }

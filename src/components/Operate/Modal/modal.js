@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom";
 import {Input} from '../../Form';
-import Animate, { Animation } from "../../Animate/Animate";
+import {Animate, Animation } from "../../Highlevel";
 import "./modal.less";
 
 export default (function() {

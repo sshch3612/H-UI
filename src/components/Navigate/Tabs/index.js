@@ -66,10 +66,10 @@ export default class extends React.Component {
       { title: "Tab7" },
       { title: "Tab8" },
       { title: "Tab9" },
-      { title: "Tab10" },
-      { title: "Tab11" }
+      { title: "Tab10"},
+      { title: "Tab11"}
     ]}>
-             <div>page1</div>
+              <div>page1</div>
               <div>page2</div>
               <div>page3</div>
               <div>page4</div>

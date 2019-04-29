@@ -21,12 +21,17 @@ function IndexPage(props) {
         </Whitespace>
         <Whitespace>
           <Wingblank>
-            <Link to='/view'><ListItem  style={ListStyle} thumb={<Iconfont type={'shielding'} color={}/>} brief={<span>包含图标、按钮</span>} arrow={<Iconfont type={'enter'}/>}>视图</ListItem></Link>
+           <Link to='/layout'><ListItem  style={ListStyle} thumb={<Iconfont type={'workbench'} color={}/>} brief={<span>包含列表、Flex等</span>} arrow={<Iconfont type={'enter'}/>}>布局</ListItem></Link> 
           </Wingblank>
         </Whitespace>
         <Whitespace>
           <Wingblank>
-          <Link to='/operate'><ListItem  style={ListStyle} thumb={<Iconfont type={'accessory'} color={}/>} brief={<span>包含图标、按钮</span>} arrow={<Iconfont type={'enter'}/>}>操作反馈</ListItem></Link>
+            <Link to='/view'><ListItem  style={ListStyle} thumb={<Iconfont type={'shielding'} color={}/>} brief={<span>包含Spin、标签等</span>} arrow={<Iconfont type={'enter'}/>}>视图</ListItem></Link>
+          </Wingblank>
+        </Whitespace>
+        <Whitespace>
+          <Wingblank>
+          <Link to='/operate'><ListItem  style={ListStyle} thumb={<Iconfont type={'accessory'} color={}/>} brief={<span>包含对话框、弹框等</span>} arrow={<Iconfont type={'enter'}/>}>操作反馈</ListItem></Link>
           </Wingblank>
         </Whitespace>
         <Whitespace>
@@ -36,7 +41,12 @@ function IndexPage(props) {
         </Whitespace>
         <Whitespace>
           <Wingblank>
-          <Link to='/navigate'><ListItem  style={ListStyle} thumb={<Iconfont type={'undo'} color={}/>} brief={<span>包含输入框、单选、复选、开关等</span>} arrow={<Iconfont type={'enter'}/>}>导航</ListItem></Link>
+          <Link to='/navigate'><ListItem  style={ListStyle} thumb={<Iconfont type={'undo'} color={}/>} brief={<span>包含导航栏、分段器等</span>} arrow={<Iconfont type={'enter'}/>}>导航</ListItem></Link>
+          </Wingblank>
+        </Whitespace>
+        <Whitespace>
+          <Wingblank>
+          <Link to='/highlevel'><ListItem  style={ListStyle} thumb={<Iconfont type={'activity'} color={}/>} brief={<span>包含动画库 等</span>} arrow={<Iconfont type={'enter'}/>}>高阶组件</ListItem></Link>
           </Wingblank>
         </Whitespace>
       </List>

@@ -21,7 +21,7 @@ function Base(props) {
           <Link to='/tag'><ListItem arrow>Tag 标签</ListItem></Link>
         </Wingblank>
         <Wingblank>
-          <ListItem arrow>Icon图标</ListItem>
+          {/* <ListItem arrow>Icon图标</ListItem> */}
         </Wingblank>
       </List>
     </div>
