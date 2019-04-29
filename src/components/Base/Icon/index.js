@@ -1,7 +1,7 @@
 import React from "react";
 import Aweicon from "./IconAwe";
 import Iconfont from "./Iconfont";
-import  {Wingblank, Flex}  from '../../Layout';
+import  {Wingblank, Flex, FlexItem}  from '../../Layout';
 import { Table } from '../../View';
 // import Csstransition from '../Animate/Csstransition';
 import { CSSTransition } from 'react-transition-group';
@@ -61,16 +61,16 @@ export default class Icon extends  React.Component {
           <h2>ICON 图标</h2>
         </Wingblank> 
         <Flex className='icon-content' itemstyle={{padding:'15px 0',textAlign:'center'}}>
-        <Aweicon type="fa-camera-retro" />
-        <Aweicon type="fa-camera-retro" size="34" color="red" />
-        <Iconfont type="video"/>
-        <Iconfont type="add"/>
-        <Iconfont type="camera"/>
-        <Iconfont type="enter"/>
-        <Iconfont type="return"/>
-        <Iconfont type="right"/>
-        <Iconfont type="search"/>
-        <Iconfont type="packup"/>
+        <FlexItem><Aweicon type="fa-camera-retro" /></FlexItem>
+        <FlexItem><Aweicon type="fa-camera-retro" size="34" color="red" /></FlexItem>
+        <FlexItem><Iconfont type="video"/></FlexItem>
+        <FlexItem><Iconfont type="add"/></FlexItem>
+        <FlexItem><Iconfont type="camera"/></FlexItem>
+        <FlexItem><Iconfont type="enter"/></FlexItem>
+        <FlexItem><Iconfont type="return"/></FlexItem>
+        <FlexItem><Iconfont type="right"/></FlexItem>
+        <FlexItem><Iconfont type="search"/></FlexItem>
+        <FlexItem><Iconfont type="packup"/></FlexItem>
         </Flex>
         <Table columns={columns} datasource={datasource}/>
         <div style={{color:'#666',padding:'15px'}}>
