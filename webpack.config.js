@@ -46,6 +46,14 @@ module.exports = {
             }
           },
           "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              plugins: [
+                require("autoprefixer")({ browsers: ["last 5 versions"] })
+              ]
+            }
+          },
           "less-loader"
         ]
         //  ["style-loader", "css-loader", "less-loader"],
@@ -61,9 +69,12 @@ module.exports = {
         test: /\.(mp3|eot|svg|ttf|woff|woff2|otf)$/,
         // loader: "url-loader",
         // options: { limit: 0, name: "audio/[name]-[hash:8].[ext]" }
-        use:[
-          {loader:'file-loader', options:{}},
-          {loader:'url-loader',options: { limit: 0, name: "audio/[name]-[hash:8].[ext]" }}
+        use: [
+          { loader: "file-loader", options: {} },
+          {
+            loader: "url-loader",
+            options: { limit: 0, name: "audio/[name]-[hash:8].[ext]" }
+          }
         ]
       }
     ]

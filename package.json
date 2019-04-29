@@ -20,6 +20,7 @@
     "webpack-dev-server": "^3.2.1"
   },
   "devDependencies": {
+    "autoprefixer": "^9.5.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-dva-hmr": "^0.3.2",
@@ -59,6 +60,7 @@
     "nodemon": "^1.18.10",
     "numeral": "^2.0.6",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-loader": "^3.0.0",
     "rc-form": "^2.4.4",
     "react-loadable": "^5.5.0",
     "style-loader": "^0.23.1",
