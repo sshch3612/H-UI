@@ -12,7 +12,7 @@ export default class extends React.Component{
   static defaultProps = {
     type: null,
     size: '32',
-    color: '#8f90f9'
+    color: '#339933'
   }
   
   render(){
