@@ -29,6 +29,11 @@ function Base(props) {
             <ListItem arrow>Divider 分割线</ListItem>
           </Link>
         </Wingblank>
+        <Wingblank>
+          <Link to="/badge">
+            <ListItem arrow>Badge 徽标</ListItem>
+          </Link>
+        </Wingblank>
       </List>
     </div>
   );

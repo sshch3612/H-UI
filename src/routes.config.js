@@ -1,5 +1,6 @@
 import {Loadable} from './components/Common';
 
+
 const routeDate = [
   {
     name:'home',
@@ -52,6 +53,11 @@ const routeDate = [
     name:'button',
     path:'/buttons',
     component:Loadable(() => import('./components/Base/Button')),
+  },
+  {
+    name:'Color',
+    path:'/color',
+    component:Loadable(() => import('./components/Base/Color')),
   },
   {
     name:'Toast',
@@ -163,6 +169,16 @@ const routeDate = [
     component:Loadable(() => import('./components/View/Tag')),
   }
   ,
+  {
+    name: 'Divider',
+    path: '/divider',
+    component:Loadable(() => import('./components/View/Divider')),
+  },
+  {
+    name: 'Badge',
+    path: '/badge',
+    component:Loadable(() => import('./components/View/Badge')),
+  },
   {
     name: 'Navbar',
     path: '/navbar',
