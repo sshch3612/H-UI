@@ -180,6 +180,11 @@ const routeDate = [
     component:Loadable(() => import('./components/View/Badge')),
   },
   {
+    name: 'Steps',
+    path: '/steps',
+    component:Loadable(() => import('./components/View/Steps')),
+  },
+  {
     name: 'Navbar',
     path: '/navbar',
     component:Loadable(() => import('./components/Navigate/Navbar')),
@@ -208,6 +213,16 @@ const routeDate = [
     name: 'Highlevel',
     path: '/highlevel',
     component:Loadable(() => import('./routes/Highlevel')),
+  },
+  {
+    name: 'Common',
+    path: '/common',
+    component:Loadable(() => import('./routes/Common')),
+  },
+  {
+    name: 'Portal',
+    path: '/portal',
+    component:Loadable(() => import('./components/Common/Portal')),
   }
 ]
 export default routeDate;

@@ -24,7 +24,8 @@ export default class extends React.Component {
     const { children , mask, onClose} = this.props;
     const Ele = (
       <div className="portal-container">
-        {mask && <div className="portal-mask" onClick={()=>{
+        {mask && <div className="portal-mask" onClick={(e)=>{
+          e.stopPropagation();
           onClose();
         }}/>}
         {children}
