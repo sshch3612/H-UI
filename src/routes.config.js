@@ -140,11 +140,15 @@ const routeDate = [
     component:Loadable(() => import('./components/Layout/Grid')),
   },
   {
-    name: 'List',
+    name: 'Accordion',
+    path: '/accordion',
+    component:Loadable(() => import('./components/Layout/Accordion')),
+  },
+  {
+    name: 'Radio',
     path: '/radio',
     component:Loadable(() => import('./components/Form/Radio')),
-  }
-  ,
+  },
   {
     name: 'Switch',
     path: '/switch',

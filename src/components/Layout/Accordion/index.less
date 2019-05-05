@@ -1,0 +1,21 @@
+.accordion {
+  &-arrow {
+    height: 18px;
+    width:18px;
+    box-sizing: border-box;
+    border:2px solid #999;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    transition: all .2s;
+    &-up{
+      transform: rotate(225deg) translateY(-4px);
+    }
+    &-down{
+      transform: rotate(45deg) translateY(-4px);
+    }
+  }
+  &-content{
+    transition: all .4s;
+    overflow: hidden;
+  }
+}
