@@ -6,9 +6,10 @@
 .tabs-header {
   display: flex;
   flex-direction: row;
-  border: 1px solid #c0c0c0;
+  // border: 1px solid #c0c0c0;
   position: relative;
    overflow-x: auto;
+
   &-item {
     box-sizing: border-box;
     flex: 1 0 0;
@@ -186,19 +187,33 @@
 
 /*位置控制*/
 
+.tabs-top {
+  .tabs-header{
+    border-bottom: 1px solid #d9d9d9;
+  }
+}
 .tabs-left {
+  .tabs-header{
+    border-right: 1px solid #d9d9d9;
+  }
   .tabs-header-line {
     right: 0;
   }
 }
 
 .tabs-right {
+  .tabs-header{
+    border-left: 1px solid #d9d9d9;
+  }
   .tabs-header-line {
     left: 0;
   }
 }
 
 .tabs-bottom {
+  .tabs-header{
+    border-top: 1px solid #d9d9d9;
+  }
   .tabs-header {
     order: 2;
   }
