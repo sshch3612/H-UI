@@ -34,6 +34,16 @@ function Base(props) {
             <ListItem arrow>Badge 徽标</ListItem>
           </Link>
         </Wingblank>
+        <Wingblank>
+          <Link to="/steps">
+            <ListItem arrow>Steps 步骤条</ListItem>
+          </Link>
+        </Wingblank>
+        <Wingblank>
+          <Link to="/noticebar">
+            <ListItem arrow>NoticeBar 通知栏</ListItem>
+          </Link>
+        </Wingblank>
       </List>
     </div>
   );

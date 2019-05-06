@@ -1,0 +1,38 @@
+.noticebar {
+  background-color: #fcf6ed;
+  padding: 6px 10px;
+  color: #de8c17;
+  font-size: 13px;
+  &-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &-icon {}
+    &-singletext {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    &-text {
+      flex: 1;
+    }
+    &-animate {
+      overflow: hidden;
+      .noticebar-content-text-content {
+        display: inline-block;
+        white-space: nowrap;
+        padding-left:100%;
+        animation: textAnimate 11s linear infinite both;
+      }
+    }
+  }
+}
+
+@keyframes textAnimate {
+  from {
+    transform: translateX(0)
+  }
+  to {
+    transform: translateX(-100%)
+  }
+}

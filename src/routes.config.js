@@ -189,6 +189,11 @@ const routeDate = [
     component:Loadable(() => import('./components/View/Steps')),
   },
   {
+    name: 'NoticeBar',
+    path: '/noticebar',
+    component:Loadable(() => import('./components/View/NoticeBar')),
+  },
+  {
     name: 'Navbar',
     path: '/navbar',
     component:Loadable(() => import('./components/Navigate/Navbar')),
